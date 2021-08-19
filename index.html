@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap cripts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <title>emailer</title>
+    <!-- Style script styling -->
+    <link rel="stylesheet" type="text/css" href="emailer.css" />
+
+    <!-- email Js Scripts -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_RK8p2JVig14mVqiuu1aFe");
+        })();
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src='script.js'></script>
+</head>
+<body>
+
+    <div class="jumbotron text-center">
+        <h1>Montana Emailer</h1>
+        <p>Send emails to your clients semmelessly!</p> 
+      </div>
+        
+      <div class="container-fluid htu-card">
+        <div class="row">
+           <h2 class='htu-card-title'>How to use Montana Emailer</h2>
+        </div>
+        <blockquote>
+            <div class="row htu-card-body">
+                <div class="col-sm-4">
+                  <h3>Step 1</h3>
+                  <p class='bg-success'>Put in the required information in the input fields</p>
+                </div>
+                <div class="col-sm-4">
+                  <h3>Step 2</h3>
+                  <p class='bg-success'>Verify that all the information you passed are correct and submit the form to send the email.</p>
+                </div>
+                <div class="col-sm-4">
+                  <h3>Step 3</h3>        
+                  <p class='bg-success'>it's that easy.!</p>
+                </div>
+            </div>
+        </blockquote>
+        
+    </div>
+    <div class="container-fluid email-card ">
+
+        <div class="row">
+            <h2 class='email-card-title'>Let's get emailing!</h2>
+         </div>
+       
+        <form action="#" class="email-form" onsubmit="EmailSender();return false" >
+            <div class="form-group">
+                <img src="logo.PNG" alt="">
+            </div>
+            <div class="form-group">
+                <label for="name">Client Name:</label>
+                <input type="text"  id="toName" class="form-control" required/>
+            </div>
+            <div class="form-group">
+                <label for="email">Client email address:</label>
+                <input type="email" class="form-control" id="toEmail" required>
+            </div>
+            <!-- <div class="form-group">
+                <label for="name">Company Name:</label>
+                <input type="text"  id="fromName" class="form-control" required/>
+            </div> -->
+  
+            <div class="">
+                <label for="message">Message:</label>
+                <textarea id="message" rows="15"  class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Send Email</button>
+        </form>
+    </div>
+     
+    <!-- <form class='email-form' ">
+        <img src="cid:YOUR_ATTACHMENT_CID" alt="attachment" class='email-img'>
+        <input type='text name='name' id='name'/>
+        <input type="email" name="email" id="email">
+        <input type="text" name="subject" id="subject">
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+    </form> -->
+</body>   
+</html>
