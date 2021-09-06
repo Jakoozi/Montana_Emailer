@@ -13,10 +13,16 @@ function EmailSender(){
 
     emailjs.send('gmail', 'template_general', tempParams)
     .then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
-       swal("Done!", response.text, "success");
+       
     }, function(error) {
        console.log('FAILED...', error);
+       document.getElementById("delivery-status").innerHTML = "Error !!!";
        swal("Oops!", error, "error");
     });
+}
+
+function AfterEmailSentSuccessfully(){
+    console.log('SUCCESS!', response.status, response.text);
+    document.getElementById("delivery-status").innerHTML = "Successfull !!!";
+    swal("Done!", response.text, "success");
 }
